@@ -1,0 +1,12 @@
+<div class="wrapper main-nav">
+    <div class="overlay"></div>
+    <nav id="main-nav" style="transform: translateY(-110%)">
+         <!-- Loop through the navigation items -->
+        {{#foreach navigation}}
+        <div class="link-wrapper">
+            <a href="{{url absolute="true"}}" class="nav-{{slug}}{{#if current}} nav-current{{/if}}">{{label}}</a>
+        </div>
+        {{/foreach}}
+        <!-- End the loop -->
+    </nav>
+</div>

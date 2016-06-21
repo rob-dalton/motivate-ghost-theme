@@ -1,0 +1,17 @@
+<header role="banner" class="post banner post m-header scene_element scene_element--fadeindown">
+    <div class="headroom-container">
+        <div class="content-wrapper overlay">
+
+            {{#if @blog.logo}}
+            <div class="wrapper logo">
+                <a class="logo-motivate" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+            </div>
+            {{/if}}
+            <div class="wrapper menu-icon">
+                <img id="menu-icon" src="/assets/images/menu-icon.svg">
+            </div>
+            {{navigation}}
+
+        </div>
+    </div>
+</header>

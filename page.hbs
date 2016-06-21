@@ -1,0 +1,22 @@
+{{!< default}}
+{{> header}}
+<div class="scene_element scene_element--fadeinup">
+<main role="main">
+    {{#post}}
+    <article class="post" role="article" itemscope itemtype="http://schema.org/Article">
+    <header>
+        <h1 class="title" itemprop="headline">{{title}}</h1>
+    </header>
+    <div class="content" itemprop="articleBody">
+    {{content}}
+    </div>
+</article>
+{{/post}}
+{{#if pagination}}
+<div class="pagination">
+{{{pagination}}}
+</div>
+{{/if}}
+</main>
+{{> footer}}
+</div>

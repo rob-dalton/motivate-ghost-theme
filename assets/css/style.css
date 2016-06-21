@@ -1,0 +1,740 @@
+/*
+ * MOTIVATE CSS
+ * v1.0.0
+ *
+ * by Rob Dalton
+ *
+ *-------------------------------------------*/
+
+
+/*
+ * CSS RESET (MEYER)
+ *
+ * http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain)
+ *
+ */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+/*-------------------------------------------*/
+
+/*
+ * GENERAL STYLING
+ * Site-wide general styles.
+ *
+ */
+@font-face {
+    font-family: "Aller";
+    src: url("../fonts/aller/Aller_Rg.ttf");
+}
+@font-face {
+    font-family: "Aller";
+    src: url("../fonts/aller/Aller_Bd.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Aller";
+    src: url("../fonts/aller/Aller_It.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "AllerLt";
+    src: url("../fonts/aller/Aller_Lt.ttf");
+}
+@font-face {
+    font-family: "Aller";
+    src: url("../fonts/aller/Aller_LtIt.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "AllerDisplay";
+    src: url("../fonts/aller/AllerDisplay.ttf");
+}
+body {
+    margin: 0;
+    background-color: #fff;
+    font-size: 1rem;
+    font-family: "Lato";
+    font-weight: 300;
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Aleo";
+    margin: .67em 0 .33em;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, nav a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2.08rem; }
+h4 { font-size: 1.74rem; }
+h5, h6 { font-size: 1.5rem; }
+p {
+    margin: 1em 0;
+    line-height: 1.42em;
+}
+strong {
+    font-weight: bold;
+}
+ul li {
+    list-style: disc;
+    margin: .25rem 0 0 2rem;
+}
+ol li {
+    list-style: decimal;
+    margin: .25rem 0 0 2rem;
+}
+p code, pre {
+    font-family: monospace;
+    background-color: #eee;
+    padding: .125rem;
+    margin: 0 .25rem;
+    box-shadow: #ccc 1px 1px 1px;
+}
+pre {
+    padding: .5rem 1rem;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #0099cc;
+}
+footer .content {
+    width: 67%;
+    margin: auto;
+    text-align: center;
+}
+article.post {
+    width: 83%;
+    max-width: 720px;
+    margin: 4.2rem auto 0;
+    padding: 3rem 0;
+    border-bottom: solid #ccc 1px;
+}
+
+/* Header */
+
+/* Headroom Mobile Menu Styling */
+header.banner {
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent;
+}
+header.sidebar.home, header.banner .headroom-container {
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    border: solid #ccc 1px;
+}
+.headroom {
+    transition: transform 200ms linear;
+}
+.headroom--unpinned {
+    transform: translateY(-110%);
+}
+.post-template main {
+    margin-top: 7em;
+}
+div.landing {
+    box-sizing: border-box;
+    padding: 7rem 0 3rem;
+    min-height: 100vh;
+}
+.banner .content-wrapper {
+    height: 100%;
+    width: 83%;
+    margin: auto;
+}
+.wrapper.logo {
+    float: left;
+    height: 100%;
+}
+a.logo-motivate img {
+    height: 3.33rem;
+    margin-top: .84rem;
+    width: auto;
+}
+.wrapper.menu-icon {
+    height: 100%;
+    text-align: right;
+    float: left;
+    width: 17%;
+    position: absolute;
+    right: 8.5%;
+    border-left: solid #ccc 1px;
+}
+#menu-icon {
+    display: inline-block;
+    height: 1.5rem;
+    margin-top: 1.75rem;
+    z-index: 100;
+}
+#main-nav {
+    font-size: 1.25em;
+    text-align: center;
+    width: 100%;
+}
+header.banner .wrapper.main-nav .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+header.banner #main-nav {
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    background-color: #ccc;
+    z-index: -100;
+}
+header.banner #main-nav .link-wrapper{
+    padding: .42rem 0;
+    border-bottom: solid #eee 1px;
+}
+#main-nav a {
+    display: block;
+    color: #fff;
+}
+.blog-cover {
+    display: block;
+    margin: auto;
+    border-radius: 17vh;
+    height: 33vh;
+    width: 33vh;
+}
+h1.blog-title {
+    font-size: 3.33em;
+    margin: 0 auto .33em;
+    color: #333;
+}
+h2.blog-description {
+    font-family: "Lato";
+    font-size: 1.25rem;
+    margin: 2rem 0 0;
+}
+h1.blog-title, h2.blog-description {
+    display: block;
+    text-align: center;
+}
+time.date {
+    color: #999;
+}
+footer {
+    margin: 2rem auto;
+    text-align: center;
+    color: #999;
+    font-size: 1rem;
+}
+.footer-text {
+    margin: .33em 0;
+}
+footer a.subscribe {
+    font-family: "Aleo";
+    font-size: 1.125rem;
+    display:inline-block;
+}
+
+/* Post & Static Page Styling
+ *
+ */
+
+.post-content {
+    margin: 2.33rem 0 0;
+}
+.post h1.post-title {
+    margin: 0;
+}
+article.post footer {
+    margin: 3rem auto 0;
+}
+article.post footer .author-name {
+    font-size: 1.125rem;
+}
+article.post .share-container {
+    margin: 1.67rem auto 0;
+}
+.share-container h4 {
+    margin: 0 0 .67rem;
+}
+.share-container .icon {
+    margin: 0 .33em;
+}
+.share-container a.icon img {
+    height: 2.33rem;
+    width: auto;
+}
+
+
+/*-------------------------------------------*/
+
+/*
+ * PAGE SPECIFIC STYLING
+ * Styles for individual pages.
+ *
+ */
+
+/* Home Page */
+header.sidebar .wrapper.main-nav {
+    display: inline-block;
+}
+header.sidebar #main-nav {
+    display:inline-block;
+    position:relative;
+}
+article.post time {
+    display: block;
+    margin: 0 0 .67em;
+    color: #999;
+}
+.home.post-loop article.post {
+    margin: 0 auto;
+    padding: 5rem 0 4rem;
+}
+.home.post-loop article.post:first-child {
+    border-top: solid #ccc 1px;
+}
+.landing .content-wrapper {
+    width: 83%;
+    margin: 0 auto;
+}
+.home article.post p:last-child::after { 
+    content: "...";
+}
+.main-home div.stage {
+    margin: 3rem auto;
+    padding: 0 0 1.5rem;
+    height: 6rem;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+.main-home div.stage img {
+    display: block;
+    margin: 0 auto;
+}
+#icon-arrow {
+    position: absolute;
+    opacity: 0;
+    width: 25%;
+    height: auto;
+    left: 37.5%;
+}
+
+/*-------------------------------------------*/
+
+/*
+ * CSS PAGE TRANSITIONS
+ * 
+ */
+
+
+/* Animations
+ *
+ */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Page Transitions 
+ * Don't forget to add vendor prefixes!
+ */
+.m-scene .scene_element {
+    -moz-animation-duration: .033s;
+    -webkit-animation-duration: .033s;
+    animation-duration: 0.33s;
+    
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    
+    -moz-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.m-scene .scene_element--fadein {
+    -moz-animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.m-scene .scene_element--fadeinup {
+    -moz-animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.m-scene .scene_element--fadeindown {
+    -moz-animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+.m-scene .scene_element--fadeinright {
+    -moz-animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.m-scene .scene_element--fadeinleft {
+    -moz-animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+/** Reverse "exit" animations */
+.m-scene.is-exiting .scene_element {
+    -moz-animation-direction: alternate-reverse;
+    -webkit-animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse;
+}
+
+/*-------------------------------------------*/
+
+/*
+ * DESKTOP STYLING
+ * Site-wide desktop styles.
+ *
+ */
+@media screen and (max-width: 32em) {
+    header.home.sidebar {
+        display: none;
+    }
+}
+@media screen and (min-width: 32em) {
+    
+    /*
+    * GENERAL STYLING
+    * Site-wide general styles.
+    *
+    */
+    
+    /* Header */
+
+    header.banner {
+        height: 4.2em;
+        position: fixed;
+    }
+    header.banner .wrapper.main-nav {
+        height: 100%;
+        width: 83%;
+        margin: auto;
+        text-align: right;
+        display: inline-block;
+        vertical-align: top;
+    }
+    header.banner #main-nav {
+        position: relative;
+        left: inherit;
+        top: inherit;
+        background-color: transparent;
+        z-index: 100;
+        height: 100%;
+    }
+    header.banner #main-nav .link-wrapper{
+        display: inline-block;
+        border-bottom: none;
+        border-left: solid #ccc 1px;
+        padding: 0;
+        height: 100%;
+    }
+    header.banner #main-nav .link-wrapper:last-child{
+        border-right: solid #ccc 1px;
+    }
+    header.banner #main-nav a{
+        margin: 1.495rem .67em .67em;
+    }
+    header.banner .content-wrapper {
+        height: 100%;
+        width: 83%;
+        margin: auto;
+    }
+    header.sidebar .wrapper.logo {
+        display: block;
+        width: 100%;
+        border-bottom: solid #ccc 1px;
+        padding: 1.67rem 0;
+    }
+    header.banner .wrapper.logo {
+        width: 16.67%;
+        height: 100%;
+        border-right: solid #ccc 1px;
+    }
+    .wrapper.logo, .wrapper.logo a {
+        display: inline-block;
+        height: auto;
+    }
+    a.logo-motivate img {
+        height: 3.2em;
+        margin-top: .5em;
+        width: auto;
+        max-width: 92%;
+    }
+    #main-nav {
+        text-align: right;
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        z-index: 100;
+        background-color: transparent;
+    }
+    #main-nav a {
+        display: inline-block;
+        margin-left: .67em;
+        color: #333;
+    }
+    h1.blog-title {
+        font-size: 4.67rem;
+    }
+    .wrapper.menu-icon {
+        display: none;
+    }
+    #menu-icon {
+        display: none;
+    }
+    article.post {
+        width: 67%;
+        height: auto;
+    }
+    /* Post / Page Styling
+     *
+     */
+
+    /*-------------------------------------------*/
+
+    /*
+     * PAGE SPECIFIC STYLING
+     * Styles for individual pages.
+     *
+     */
+
+    /* Home Page
+     *
+     */
+    div.landing {
+        padding: 5rem 0;
+    }
+    header.home.banner {
+        display: none;
+    }
+    header.sidebar {
+        width: 20.83%;
+        min-width: 240px;
+        height: 100%;
+        position: fixed;
+        font-size: 1.125em;
+        border-right: solid #ccc 1px;
+    }
+    header.sidebar .logo-motivate img {
+        margin: 0 1rem;
+    }
+    header.sidebar .wrapper.main-nav {
+        width: 100%;
+    }
+    header.sidebar #main-nav {
+        text-align: left;
+    }
+    header.sidebar #main-nav .link-wrapper {
+        border-bottom: solid #ccc 1px;
+    }
+    header.sidebar #main-nav a {
+        margin: 0;
+        padding: 1rem 1.125rem;
+        display: block;
+    }
+    header.sidebar #main-nav a:first-child {
+        margin-top: 0;
+    }
+    .landing .content-wrapper {
+        width: 67%;
+        max-width: 720px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .landing .row {
+        display: inline-block;
+        width: 100%;
+        clear: both;
+    }
+    .landing .blog-cover-wrapper {
+        display: inline-block;
+    }
+    .blog-cover {
+        width: 25%;
+        min-width: 180px;
+        max-width: 240px;
+        border-radius: 50%;
+        height: auto;
+    }
+    h1.blog-title {
+        margin: 0 auto 2rem;
+    }
+    h2.blog-description {
+        font-size: 1.67rem;
+        line-height: 2rem;
+        box-sizing: border-box;
+        width: 67%;
+        margin: 2rem auto 0;
+    }
+    .main-home.post-loop-container {
+        width: 79.27%;
+        position: absolute;
+        right: 0;
+    }
+    #icon-arrow {
+        height: 6rem;
+        width: 6rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .main-home .post-loop article.post:first-child{
+        margin-top: 0;
+    }
+    
+    /*-------------------------------------------*/
+
+    /*
+     * CSS PAGE TRANSITIONS
+     * 
+     */
+
+
+    /* Animations
+     *
+     */
+    
+    .m-scene .scene_element--fadeinright {
+        -moz-animation-name: fadeInRight;
+        -webkit-animation-name: fadeInRight;
+        animation-name: fadeInRight;
+    }
+    .m-scene .scene_element--fadeinleft {
+        -moz-animation-name: fadeInLeft;
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+    }
+}
