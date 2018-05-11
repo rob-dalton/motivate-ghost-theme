@@ -1,4 +1,7 @@
 {
-	"name": "Motivate",
-	"version": "1.0"
+	"name": "motivate",
+	"version": "2.0.0",
+  "author": {
+    "email": "rob@robdalton.me"
+  }
 }

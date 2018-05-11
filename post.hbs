@@ -5,7 +5,7 @@
     {{#post}}
     <article class="post" role="article" itemscope itemtype="http://schema.org/Article">
     <header>
-        <time class="date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='MMM DD, YYYY'}}</time>
+        <time class="date" dgit@github.com:rob-dalton/motivate-ghost-theme.gitatetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='MMM DD, YYYY'}}</time>
         <h1 class="post-title" itemprop="headline">{{title}}</h1>
     </header>
     <div class="post-content" itemprop="articleBody">
@@ -19,9 +19,9 @@
     <footer>
         {{#if author}}
         <address itemscope itemtype="http://schema.org/Person">
-        {{#if author.image}}
+        {{#if author.profile_image}}
         <div class="author-image">
-            <img src="{{author.image}}" itemprop="image" />
+            <img src="{{author.profile_image}}" itemprop="image" />
         </div>
         {{/if}}
         <div class="author-name">
