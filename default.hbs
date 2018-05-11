@@ -7,7 +7,7 @@
     {{! Page Meta }}
     <title>{{meta_title}}</title>
     {{! Styles }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}"/>
     {{! Responsive Meta Tags }}
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
@@ -16,11 +16,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="/assets/js/smoothState/src/jquery.smoothState.min.js"></script>
-    <script src="/assets/js/headroom.min.js"></script>
-    <script src="/assets/js/velocity.min.js"></script>
-    <script src="/assets/js/velocity.ui.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="{{asset "js/smoothState/src/jquery.smoothState.min.js"}}"></script>
+    <script src="{{asset "js/headroom.min.js"}}"></script>
+    <script src="{{asset "js/velocity.min.js"}}"></script>
+    <script src="{{asset "js/velocity.ui.min.js"}}"></script>
+    <script src="{{asset "js/main.js"}}"></script>
     {{ghost_head}}
 </head>
 <body>
