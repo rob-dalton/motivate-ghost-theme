@@ -1,6 +1,6 @@
 /*
  * MOTIVATE CSS
- * v1.0.0
+ * v1.1.0
  *
  * by Rob Dalton
  *
@@ -67,31 +67,35 @@
  *
  */
 @font-face {
-    font-family: "Aller";
-    src: url("../fonts/aller/Aller_Rg.ttf");
+    font-family: "Aleo";
+    src: url("../fonts/aleo/aleo-regular-webfont.woff");
 }
 @font-face {
-    font-family: "Aller";
-    src: url("../fonts/aller/Aller_Bd.ttf");
+    font-family: "Aleo";
+    src: url("../fonts/aleo/aleo-bold-webfont.woff");
     font-weight: bold;
 }
 @font-face {
-    font-family: "Aller";
-    src: url("../fonts/aller/Aller_It.ttf");
+    font-family: "Aleo";
+    src: url("../fonts/aleo/aleo-bolditalic-webfont.woff");
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Aleo";
+    src: url("../fonts/aleo/aleo-italic-webfont.woff");
     font-style: italic;
 }
 @font-face {
-    font-family: "AllerLt";
-    src: url("../fonts/aller/Aller_Lt.ttf");
+    font-family: "Aleo";
+    src: url("../fonts/aleo/aleo-light-webfont.woff");
+    font-weight: lighter;
 }
 @font-face {
-    font-family: "Aller";
-    src: url("../fonts/aller/Aller_LtIt.ttf");
+    font-family: "Aleo";
+    src: url("../fonts/aleo/aleo-lightitalic-webfont.woff");
     font-style: italic;
-}
-@font-face {
-    font-family: "AllerDisplay";
-    src: url("../fonts/aller/AllerDisplay.ttf");
+    font-weight: lighter;
 }
 body {
     margin: 0;
@@ -99,11 +103,11 @@ body {
     font-size: 1rem;
     font-family: "Lato";
     font-weight: 300;
-    color: #333;
 }
 h1, h2, h3, h4, h5, h6 {
+    color: #9B0000;
     font-family: "Aleo";
-    margin: .67em 0 .33em;
+    margin: 1.33em 0 .33em;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, nav a {
     color: inherit;
@@ -135,6 +139,7 @@ p code, pre {
     background-color: #eee;
     padding: .125rem;
     margin: 0 .25rem;
+    color: #272222;
     box-shadow: #ccc 1px 1px 1px;
 }
 pre {
@@ -143,7 +148,7 @@ pre {
 }
 a {
     text-decoration: none;
-    color: #0099cc;
+    color: #009999;
 }
 footer .content {
     width: 67%;
@@ -165,7 +170,7 @@ header.banner {
     height: 5rem;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 100;
     background-color: transparent;
 }
@@ -250,19 +255,20 @@ header.banner #main-nav .link-wrapper{
 .blog-cover {
     display: block;
     margin: auto;
-    border-radius: 17vh;
-    height: auto;
-    width: 33vh;
+    border-radius: 12vh;
+    height: 24vh;
+    width: 24vh;
 }
 h1.blog-title {
     font-size: 3.33em;
     margin: 0 auto .33em;
-    color: #333;
+    color: #FF0000;
 }
 h2.blog-description {
     font-family: "Lato";
     font-size: 1.25rem;
     margin: 2rem 0 0;
+    color: #005D5D;
 }
 h1.blog-title, h2.blog-description {
     display: block;
@@ -280,6 +286,9 @@ footer {
 .footer-text {
     margin: .33em 0;
 }
+footer a {
+    color: #009999;
+}
 footer a.subscribe {
     font-family: "Aleo";
     font-size: 1.125rem;
@@ -290,10 +299,10 @@ footer a.subscribe {
  *
  */
 
-.post-content {
+.post-content, .page-content {
     margin: 2.33rem 0 0;
 }
-.post h1.post-title {
+.post h1.post-title, .page h1.title {
     margin: 0;
 }
 article.post footer {
@@ -370,6 +379,46 @@ article.post time {
     width: 25%;
     height: auto;
     left: 37.5%;
+}
+.footer-text.attribution {
+    margin: 1.67em auto 0;
+}
+footer.home .attribution a {
+  height: 1em;
+  position: relative;
+  width: 7em;
+  display: inline-block;
+}
+footer.home .attribution img {
+    height: 3em;
+    width: auto;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+}
+
+/* About Page */
+div.social {
+    margin: 1.33rem 0 0;
+}
+div.social .item {
+    margin: 0 0 1.25rem 1.25rem;
+}
+div.social .item:last-child {
+    margin-bottom: 0;
+}
+span.social-icon-container {
+    display: inline-block;
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: .5rem;
+}
+img.social-icon {
+    position: absolute;
+    top: .42rem;
+    height: 1.5rem;
+    width: auto;
 }
 
 /*-------------------------------------------*/
@@ -588,18 +637,11 @@ article.post time {
         display: inline-block;
         height: auto;
     }
-    a.logo-motivate {
-      display: block !important;
-      position: relative;
-      height: 100% !important;
-    }
     a.logo-motivate img {
-        position: absolute;
-        height: auto;
+        height: 3.2em;
+        margin-top: .5em;
+        width: auto;
         max-width: 92%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: 0;
     }
     #main-nav {
         text-align: right;
@@ -611,7 +653,7 @@ article.post time {
     #main-nav a {
         display: inline-block;
         margin-left: .67em;
-        color: #333;
+        color: #005D5D;
     }
     h1.blog-title {
         font-size: 4.67rem;
@@ -654,9 +696,6 @@ article.post time {
         position: fixed;
         font-size: 1.125em;
         border-right: solid #ccc 1px;
-    }
-    header.sidebar a.logo-motivate {
-        width: 67%;
     }
     header.sidebar .logo-motivate img {
         margin: 0 1rem;
