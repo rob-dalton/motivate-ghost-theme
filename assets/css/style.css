@@ -302,7 +302,7 @@ footer a.subscribe {
 .post-content, .page-content {
     margin: 2.33rem 0 0;
 }
-.post h1.post-title, .page h1.title {
+.post h1.post-title, .page-template h1.title {
     margin: 0;
 }
 article.post footer {
