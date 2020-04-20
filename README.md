@@ -1,7 +1,5 @@
 MOTIVATE GHOST THEME
-v2.0
+v3.0.0
 created by Rob Dalton
 
-Ghost theme built from scratch for Ghost 1.2.7
-
-Demo site: https://motivate.robdalton.me
+Ghost theme built from scratch for Ghost-CLI 1.13.1
