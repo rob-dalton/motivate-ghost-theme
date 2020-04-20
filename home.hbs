@@ -5,18 +5,18 @@
     <div class="landing">
         <div class="content-wrapper wrapper">
                 <h1 class="blog-title">
-                    <a title="{{@blog.title}}" href='{{@blog.url}}'>
-                    {{{@blog.title}}}
+                    <a title="{{@site.title}}" href='{{@site.url}}'>
+                    {{{@site.title}}}
                     </a>
                 </h1>
-                {{#if @blog.cover_image}}
+                {{#if @site.cover_image}}
                 <div class="wrapper blog-cover-wrapper row">
-                    <img class="blog-cover" src="{{@blog.cover_image}}">
+                    <img class="blog-cover" src="{{@site.cover_image}}">
                 </div>
                 {{/if}}
                 <h2 class="blog-description">
-                    <a title="{{@blog.title}}" href='{{@blog.url}}'>
-                    {{@blog.description}}
+                    <a title="{{@site.title}}" href='{{@site.url}}'>
+                    {{@site.description}}
                     </a>
                 </h2>
                 <div class="stage">

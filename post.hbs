@@ -17,31 +17,30 @@
     </div>
     {{/if}}
     <footer>
-        {{#if author}}
+        {{#if primary_author}}
         <address itemscope itemtype="http://schema.org/Person">
-        {{#if author.profile_image}}
+        {{#if primary_author.profile_image}}
         <div class="author-image">
-            <img src="{{author.profile_image}}" itemprop="image" />
+            <img src="{{primary_author.profile_image}}" itemprop="image" />
         </div>
         {{/if}}
         <div class="author-name">
-            Written by <span itemprop="author">{{author.name}}</span>
+            Written by <span itemprop="author">{{primary_author.name}}</span>
         </div>
-        {{#if author.website}}
+        {{#if primary_author.website}}
         <div class="author-website">
-            <a href="{{author.website}}" itemprop="url">{{author.website}}</a>
+            <a href="{{primary_author.website}}" itemprop="url">{{primary_author.website}}</a>
         </div>
         {{/if}}
         </address>
         <div class="author-bio">
-            <p>{{author.bio}}</p>
+            <p>{{primary_author.bio}}</p>
         </div>
         {{/if}}
         <div class="share-container">
             <h4>Share this post: &nbsp;</h4>
-            <a class="icon icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><img src="/assets/images/icon_facebook.svg" alt="Facebook"></a>
-            <a class="icon icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><img src="/assets/images/icon_twitter.svg" alt="Twitter"></a>
-            <a class="icon icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><img src="/assets/images/icon_google-plus.svg" alt="Google+"></a>
+            <a class="icon icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><img src="{{asset 'images/icon_facebook.svg'}}" alt="Facebook"></a>
+            <a class="icon icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><img src="{{asset 'images/icon_twitter.svg'}}" alt="Twitter"></a>
         </div>
     </footer>
 </article>

@@ -1,13 +1,13 @@
 {{!-- DESKTOP SIDEBAR HEADER --}}
 <header role="sidebar" class="sidebar home scene_element scene_element--fadeinleft">
         <div class="content-wrapper wrapper">
-            {{#if @blog.logo}}
+            {{#if @site.logo}}
             <div class="wrapper logo">
-                <a class="logo-motivate" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                <a class="logo-motivate" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
             </div>
             {{/if}}
             <div class="wrapper menu-icon">
-                <img id="menu-icon" src="/assets/images/menu-icon.svg">
+                <img id="menu-icon" src="{{asset 'images/menu-icon.svg'}}">
             </div>
             {{navigation}}
         </div>
@@ -17,13 +17,13 @@
 <header role="banner" class="banner home m-header scene_element scene_element--fadeindown">
     <div class="headroom-container">
         <div class="content-wrapper">
-            {{#if @blog.logo}}
+            {{#if @site.logo}}
             <div class="wrapper logo">
-                <a class="logo-motivate" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                <a class="logo-motivate" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
             </div>
             {{/if}}
             <div class="wrapper menu-icon">
-                <img id="menu-icon" src="/assets/images/menu-icon.svg">
+                <img id="menu-icon" src="{{asset 'images/menu-icon.svg'}}">
             </div>
             {{navigation}}
         </div>

@@ -2,13 +2,13 @@
     <div class="headroom-container">
         <div class="content-wrapper overlay">
 
-            {{#if @blog.logo}}
+            {{#if @site.logo}}
             <div class="wrapper logo">
-                <a class="logo-motivate" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                <a class="logo-motivate" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
             </div>
             {{/if}}
             <div class="wrapper menu-icon">
-                <img id="menu-icon" src="/assets/images/menu-icon.svg">
+                <img id="menu-icon" src="{{asset 'images/menu-icon.svg'}}">
             </div>
             {{navigation}}
 

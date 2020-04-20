@@ -1,6 +1,10 @@
 {
         "name": "motivate",
-        "version": "2.0.0",
+        "version": "3.0.0",
         "author": {"email": "rob@robdalton.me"},
-        "config": {"posts_per_page": 5}
+        "config": {"posts_per_page": 5},
+        "keywords": ["ghost-theme"],
+        "engines": {
+               "ghost-api": "v3"
+        }
 }
